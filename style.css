@@ -269,7 +269,7 @@ body {
 }
 /* BOTÃO OKOK COM IMAGEM */
 .btn-okok-img {
-  background-image: url('Icon-513.png');
+  background-image: url('icon-513.png');
   background-size: cover;
   background-position: center;
   background-color: transparent !important;
