@@ -1,48 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navButtons = document.querySelectorAll('.nav-btn');
-  const mainView = document.getElementById('main-view');
+  const mainView = document.getElementById('main-view'); // sua página 1
   const views = document.querySelectorAll('.view');
   const btnBack = document.querySelectorAll('.btn-back');
 
-  // Alterna entre abas
+  // Clicou no botão do menu
   navButtons.forEach(button => {
     button.addEventListener('click', () => {
+      const viewId = button.getAttribute('data-view'); // só lê data-view
+      
+      // tira active de todos os botões
       navButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      const categoryName = button.getAttribute('data-category');
-      const viewId = button.getAttribute('data-view'); // <-- ISSO AQUI É O SEGREDO
+      // Se o botão NÃO tem data-view, não faz nada
+      if(!viewId) return;
 
+      // esconde tudo
+      mainView.style.display = 'none';
       views.forEach(v => v.classList.remove('active'));
-      mainView.classList.remove('active');
       
-      document.getElementById(viewId).classList.add('active');
-      document.getElementById(viewId).querySelector('.section-title').textContent = categoryName;
+      // mostra só a página clicada
+      const targetView = document.getElementById(viewId);
+      if(targetView){
+        targetView.classList.add('active');
+      }
     });
   });
 
-  // Botão voltar - agora funciona pra todas
+  // Clicou em Voltar
   btnBack.forEach(btn => {
     btn.addEventListener('click', () => {
       views.forEach(v => v.classList.remove('active'));
-      mainView.classList.add('active');
+      mainView.style.display = 'block';
       navButtons.forEach(b => b.classList.remove('active'));
     });
   });
-
-  // Botão de atualizar
-  const btnRefresh = document.getElementById('btn-refresh');
-  btnRefresh.addEventListener('click', () => {
-    caches.keys().then(keys => {
-      keys.forEach(key => caches.delete(key));
-    });
-    location.reload(true);
-  });
-
-  // Service Worker
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-    .then(reg => console.log('Service Worker registrado:', reg.scope))
-    .catch(err => console.error('Erro ao registrar Service Worker:', err));
-  }
 });
