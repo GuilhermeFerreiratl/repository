@@ -37,3 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+// CÓDIGO DO BOTÃO ATUALIZAR APP
+document.getElementById('btn-refresh').addEventListener('click', async () => {
+  
+  alert('Buscando atualização...');
+
+  if ('serviceWorker' in navigator) {
+    const reg = await navigator.serviceWorker.getRegistration();
+    
+    // 1. Força baixar novo sw.js
+    await reg.update(); 
+    
+    // 2. Apaga cache velho
+    const nomesCache = await caches.keys();
+    await Promise.all(nomesCache.map(nome => caches.delete(nome)));
+  }
+  
+  alert('Atualizado! Recarregando...');
+  // 3. Recarrega sem cache
+  window.location.reload(true); 
+});
