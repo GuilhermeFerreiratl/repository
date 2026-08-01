@@ -1,43 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const navButtons = document.querySelectorAll('.nav-btn');
-  const mainView = document.getElementById('main-view');
-  const categoryView = document.getElementById('category-view');
-  const categoryTitle = document.getElementById('category-title');
-  const btnBack = document.getElementById('btn-back');
+navButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
 
-  // Alterna entre abas
-  navButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      navButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+    // Esconde todas as views
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
 
-      const categoryName = button.getAttribute('data-category');
-      categoryTitle.textContent = categoryName;
-
-      mainView.classList.remove('active');
-      categoryView.classList.add('active');
-    });
+    // Mostra a view correta
+    const category = button.textContent.trim();
+    if (category === "GrupoW1") {
+      document.getElementById('grupoW1-view').classList.add('active');
+    } else if (category === "Clube777") {
+      document.getElementById('clube777-view').classList.add('active');
+    } else if (category === "Clube888") {
+      document.getElementById('clube888-view').classList.add('active');
+    } else {
+      document.getElementById('category-view').classList.add('active');
+    }
   });
-
-  // Botão voltar
-  btnBack.addEventListener('click', () => {
-    categoryView.classList.remove('active');
-    mainView.classList.add('active');
-  });
-
-  // Botão de atualizar
-  const btnRefresh = document.getElementById('btn-refresh');
-  btnRefresh.addEventListener('click', () => {
-    caches.keys().then(keys => {
-      keys.forEach(key => caches.delete(key));
-    });
-    location.reload(true);
-  });
-
-  // Service Worker
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('Service Worker registrado:', reg.scope))
-      .catch(err => console.error('Erro ao registrar Service Worker:', err));
-  }
 });
