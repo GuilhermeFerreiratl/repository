@@ -1,28 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navButtons = document.querySelectorAll('.nav-btn');
-  const views = document.querySelectorAll('.view');
-  const btnRefresh = document.getElementById('btn-refresh');
+  const mainView = document.getElementById('main-view');
+  const categoryView = document.getElementById('category-view');
+  const categoryTitle = document.getElementById('category-title');
+  const btnBack = document.getElementById('btn-back');
 
-  // Alterna entre views
+  // Alterna entre abas
   navButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Remove active de todas as views
-      views.forEach(v => v.classList.remove('active'));
-      // Mostra a view correspondente
-      const targetId = button.getAttribute('data-target');
-      document.getElementById(targetId).classList.add('active');
+      navButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const categoryName = button.getAttribute('data-category');
+      categoryTitle.textContent = categoryName;
+
+      mainView.classList.remove('active');
+      categoryView.classList.add('active');
     });
   });
 
   // Botão voltar
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('btn-back')) {
-      views.forEach(v => v.classList.remove('active'));
-      document.getElementById('main-view').classList.add('active');
-    }
+  btnBack.addEventListener('click', () => {
+    categoryView.classList.remove('active');
+    mainView.classList.add('active');
   });
 
   // Botão de atualizar
+  const btnRefresh = document.getElementById('btn-refresh');
   btnRefresh.addEventListener('click', () => {
     caches.keys().then(keys => {
       keys.forEach(key => caches.delete(key));
