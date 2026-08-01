@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryTitle = document.getElementById('category-title');
   const btnBack = document.getElementById('btn-back');
 
+  // Alterna entre abas
   navButtons.forEach(button => {
     button.addEventListener('click', () => {
       navButtons.forEach(btn => btn.classList.remove('active'));
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Botão voltar
   btnBack.addEventListener('click', () => {
     categoryView.classList.remove('active');
     mainView.classList.add('active');
