@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryTitle = document.getElementById('category-title');
   const btnBack = document.getElementById('btn-back');
 
-  // Alterna entre abas e carrega a Segunda Tela
+  // Alterna entre abas e carrega a Segunda Tela ao clicar em QUALQUER item do menu
   navButtons.forEach(button => {
     button.addEventListener('click', () => {
       // Atualiza estado ativo no menu
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Funcionalidade do Botão Voltar
+  // Funcionalidade do Botão Voltar (Retorna para a tela principal de jogos)
   btnBack.addEventListener('click', () => {
     categoryView.classList.remove('active');
     mainView.classList.add('active');
