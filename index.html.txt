@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cassino PWA</title>
+  
+  <!-- Configurações PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#9333EA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="https://via.placeholder.com/192/9333EA/ffffff?text=PWA">
+
+  <!-- Fonte Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Superior -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="logo">🎮 CassinoVIP</div>
+      <button class="btn-profile">Entrar</button>
+    </div>
+  </header>
+
+  <!-- Layout Principal -->
+  <div class="app-container">
+    
+    <!-- Menu Lateral / Navegação -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-category="🔥 Popular">
+          <span class="icon">🔥</span>
+          <span class="text">Popular</span>
+        </button>
+        <button class="nav-btn" data-category="🎰 Slots">
+          <span class="icon">🎰</span>
+          <span class="text">Slots</span>
+        </button>
+        <button class="nav-btn" data-category="🐟 Pescaria">
+          <span class="icon">🐟</span>
+          <span class="text">Pescaria</span>
+        </button>
+        <button class="nav-btn" data-category="🕒 Recente">
+          <span class="icon">🕒</span>
+          <span class="text">Recente</span>
+        </button>
+        <button class="nav-btn" data-category="⭐ Favoritos">
+          <span class="icon">⭐</span>
+          <span class="text">Favoritos</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Área de Conteúdo -->
+    <main class="main-content">
+      
+      <!-- TELA 1: Vitrine de Jogos (Visível por padrão) -->
+      <section id="main-view" class="view active">
+        <h2 class="section-title">Jogos em Destaque</h2>
+        <div class="games-grid">
+          <div class="game-card">
+            <img src="https://picsum.photos/300/200?random=1" alt="Jogo 1">
+            <div class="card-title">Tiger Fortune</div>
+          </div>
+          <div class="game-card">
+            <img src="https://picsum.photos/300/200?random=2" alt="Jogo 2">
+            <div class="card-title">Ocean Hunter</div>
+          </div>
+          <div class="game-card">
+            <img src="https://picsum.photos/300/200?random=3" alt="Jogo 3">
+            <div class="card-title">Dragon's Gold</div>
+          </div>
+          <div class="game-card">
+            <img src="https://picsum.photos/300/200?random=4" alt="Jogo 4">
+            <div class="card-title">Wild Reels</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TELA 2: Segunda Tela (Aparece ao clicar em um item do menu) -->
+      <section id="category-view" class="view">
+        <button id="btn-back" class="btn-back">⬅ Voltar</button>
+        <h2 id="category-title" class="section-title">Categoria</h2>
+        
+        <div class="action-buttons-group">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="action-btn">
+            Botão 1
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="action-btn">
+            Botão 2
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="action-btn">
+            Botão 3
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
