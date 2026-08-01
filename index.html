@@ -1,29 +1,31 @@
-<section id="grupoW1-view" class="view">
-  <button class="btn-back">⬅ Voltar</button>
-  <h2 class="section-title">Grupo W1</h2>
-  <div class="action-buttons-group">
-    <a href="https://facebook.com" target="_blank" class="action-btn">Acessar Jogo 1</a>
-    <a href="https://facebook.com" target="_blank" class="action-btn">Acessar Jogo 2</a>
-    <a href="https://facebook.com" target="_blank" class="action-btn">Acessar Jogo 3</a>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coperação</title>
 
-<section id="clube777-view" class="view">
-  <button class="btn-back">⬅ Voltar</button>
-  <h2 class="section-title">Clube 777</h2>
-  <div class="action-buttons-group">
-    <a href="https://instagram.com" target="_blank" class="action-btn">Acessar Jogo 1</a>
-    <a href="https://instagram.com" target="_blank" class="action-btn">Acessar Jogo 2</a>
-    <a href="https://instagram.com" target="_blank" class="action-btn">Acessar Jogo 3</a>
-  </div>
-</section>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#9333EA">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<section id="clube888-view" class="view">
-  <button class="btn-back">⬅ Voltar</button>
-  <h2 class="section-title">Clube 888</h2>
-  <div class="action-buttons-group">
-    <a href="https://google.com" target="_blank" class="action-btn">Acessar Jogo 1</a>
-    <a href="https://google.com" target="_blank" class="action-btn">Acessar Jogo 2</a>
-    <a href="https://google.com" target="_blank" class="action-btn">Acessar Jogo 3</a>
-  </div>
-</section>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="logo">🎮 Plataforma Coperação e Jogar</div>
+    </div>
+  </header>
+
+  <!-- BOTÃO DE ATUALIZAR -->
+  <button id="btn-refresh" class="refresh-btn">🔄 Atualizar App</button>
+
+  <!-- Layout Principal -->
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <button class="nav-btn" data-target="grupoW1-view">🔥 GrupoW1</button>
+        <button class="nav-btn" data-target="clube777-view">🔥 Clube777</button>
