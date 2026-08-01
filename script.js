@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navButtons = document.querySelectorAll('.nav-btn');
   const mainView = document.getElementById('main-view');
-  const categoryView = document.getElementById('category-view');
-  const categoryTitle = document.getElementById('category-title');
-  const btnBack = document.getElementById('btn-back');
+  const views = document.querySelectorAll('.view');
+  const btnBack = document.querySelectorAll('.btn-back');
 
   // Alterna entre abas
   navButtons.forEach(button => {
@@ -12,17 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.add('active');
 
       const categoryName = button.getAttribute('data-category');
-      categoryTitle.textContent = categoryName;
+      const viewId = button.getAttribute('data-view'); // <-- ISSO AQUI É O SEGREDO
 
+      views.forEach(v => v.classList.remove('active'));
       mainView.classList.remove('active');
-      categoryView.classList.add('active');
+      
+      document.getElementById(viewId).classList.add('active');
+      document.getElementById(viewId).querySelector('.section-title').textContent = categoryName;
     });
   });
 
-  // Botão voltar
-  btnBack.addEventListener('click', () => {
-    categoryView.classList.remove('active');
-    mainView.classList.add('active');
+  // Botão voltar - agora funciona pra todas
+  btnBack.forEach(btn => {
+    btn.addEventListener('click', () => {
+      views.forEach(v => v.classList.remove('active'));
+      mainView.classList.add('active');
+      navButtons.forEach(b => b.classList.remove('active'));
+    });
   });
 
   // Botão de atualizar
@@ -37,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Service Worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('Service Worker registrado:', reg.scope))
-      .catch(err => console.error('Erro ao registrar Service Worker:', err));
+    .then(reg => console.log('Service Worker registrado:', reg.scope))
+    .catch(err => console.error('Erro ao registrar Service Worker:', err));
   }
 });
