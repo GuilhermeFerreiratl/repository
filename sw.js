@@ -1,10 +1,12 @@
-const CACHE_NAME = 'pwa-cassino-v2';
+const CACHE_NAME = 'pwa-cassino-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './style.css',
   './script.js',
-  './manifest.json'
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
