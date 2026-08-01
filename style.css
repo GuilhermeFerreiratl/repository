@@ -267,6 +267,24 @@ body {
   font-size: 1rem;
   transition: transform 0.2s;
 }
+/* BOTÃO OKOK COM IMAGEM */
+.btn-okok-img {
+  background-image: url('Icon-513.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-okok-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-okok-img .icon {
+  display: none; /* tira o 🔥 */
+}
 
 .whatsapp-btn:hover {
   transform: scale(1.08);
