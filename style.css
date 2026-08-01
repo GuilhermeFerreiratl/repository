@@ -196,6 +196,13 @@ body {
 .action-btn:hover {
   background-color: #7E22CE;
   transform: scale(1.02);
+  /* Textos da Tela 2 menores */
+.action-buttons-group p {
+  font-size: 0.8rem; /* mesmo tamanho dos botões */
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 4px 0;
+  text-align: center;
 }
 
 /* Responsivo */
