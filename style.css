@@ -267,7 +267,61 @@ body {
   font-size: 1rem;
   transition: transform 0.2s;
 }
-/* BOTÃO OKOK COM IMAGEM */
+/* BOTÃO Grupow1 COM IMAGEM */
+.btn-w1-img {
+  background-image: url('icon-w1.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-w1-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-w1-img .icon {
+  display: none; /* tira o 🔥 */
+}
+/* BOTÃO Clube888 COM IMAGEM */
+.btn-Clube888-img {
+  background-image: url('icon-888.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-Clube888-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-Clube888-img .icon {
+  display: none; /* tira o 🔥 */
+}
+/* BOTÃO Equipe777 COM IMAGEM */
+.btn-Equipe777-img {
+  background-image: url('icon-equipe777.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-Equipe777-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-Equipe777-img .icon {
+  display: none; /* tira o 🔥 */
+}
+/* BOTÃO Clube777 COM IMAGEM */
 .btn-Clube777-img {
   background-image: url('icon-Clube777.png');
   background-size: cover;
