@@ -337,7 +337,8 @@ body {
 }
 
 .btn-Clube777-img .icon {
-  display: /* tira o  none */; /* tira o 🔥 */
+  display: none; /* tira o 🔥 */
+  display: none; /* tira o Clube777 */
 }
 /* BOTÃO we COM IMAGEM */
 .btn-we-img {
