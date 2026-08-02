@@ -437,7 +437,7 @@ body {
 .btn-Clube888-img {
   background-size: cover;
   background-position: center;
-  width: 70px; /* tamanho da foto. Pode ajustar */
-  height: 170px; /* deixa quadrado */
+  width: 170px; /* tamanho da foto. Pode ajustar */
+  height: 70px; /* deixa quadrado */
   border-radius: 15px; /* borda arredondada */
 }
