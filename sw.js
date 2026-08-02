@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pwa-cassino-v12';
+const CACHE_NAME = 'pwa-cassino-v13';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
