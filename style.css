@@ -415,3 +415,29 @@ body {
 .whatsapp-btn:hover {
   transform: scale(1.08);
 }
+/* SÓ FOTO NOS BOTÕES DE CIMA - SEM NOME */
+.btn-w1-img .text, 
+.btn-clube777-img .text, 
+.btn-okok-img .text, 
+.btn-clube888-img .text {
+  display: none !important; /* some com o nome */
+}
+
+.btn-w1-img .icon, 
+.btn-clube777-img .icon, 
+.btn-okok-img .icon, 
+.btn-clube888-img .icon {
+  display: none !important; /* some com o emoji também */
+}
+
+/* Garante que a foto ocupa tudo */
+.btn-w1-img, 
+.btn-clube777-img, 
+.btn-okok-img, 
+.btn-clube888-img {
+  background-size: cover;
+  background-position: center;
+  width: 70px; /* tamanho da foto. Pode ajustar */
+  height: 70px; /* deixa quadrado */
+  border-radius: 15px; /* borda arredondada */
+}
