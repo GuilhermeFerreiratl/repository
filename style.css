@@ -268,21 +268,21 @@ body {
   transition: transform 0.2s;
 }
 /* BOTÃO OKOK COM IMAGEM */
-.btn-wi-img {
-  background-image: url('icon-w1.png');
+.btn-Clube777-img {
+  background-image: url('icon-Clube777.png');
   background-size: cover;
   background-position: center;
   background-color: transparent !important;
   border: none;
 }
 
-.btn-okok-img .text {
+.btn-Clube777-img .text {
   color: #FFFFFF;
   font-weight: 900;
   text-shadow: 2px 2px 4px #000;
 }
 
-.btn-okok-img .icon {
+.btn-Clube777-img .icon {
   display: none; /* tira o 🔥 */
 }
 /* BOTÃO OKOK COM IMAGEM */
