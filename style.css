@@ -418,14 +418,22 @@ body {
 /* SÓ FOTO NOS BOTÕES DE CIMA - SEM NOME */
 .btn-w1-img .text, 
 .btn-Clube777-img .text, 
-.btn-okok-img .text, 
+.btn-okok-img .text,
+.btn-anjo-img .text,
+.btn-voy-img .text,
+.btn-we-img .text,
+.btn-Equipe777-img .text,
 .btn-Clube888-img .text {
   display: none !important; /* some com o nome */
 }
 
 .btn-w1-img .icon, 
-.btn-Clube777-img .icon, 
-.btn-okok-img .icon, 
+.btn-Clube777-img .icon,
+.btn-okok-img .icon,
+.btn-anjo-img .icon,
+.btn-voy-img .icon,
+.btn-we-img .icon,
+.btn-Equipe777-img .icon, 
 .btn-Clube888-img .icon {
   display: none !important; /* some com o emoji também */
 }
@@ -433,7 +441,11 @@ body {
 /* Garante que a foto ocupa tudo */
 .btn-w1-img, 
 .btn-Clube777-img, 
-.btn-okok-img, 
+.btn-okok-img,
+.btn-anji-img,
+.btn-voy-img,
+.btn-we-img,
+.btn-Equipe777-img,
 .btn-Clube888-img {
   background-size: cover;
   background-position: center;
