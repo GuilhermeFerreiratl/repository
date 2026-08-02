@@ -339,6 +339,60 @@ body {
 .btn-Clube777-img .icon {
   display: none; /* tira o 🔥 */
 }
+/* BOTÃO we COM IMAGEM */
+.btn-we-img {
+  background-image: url('icon-we.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-we-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-we-img .icon {
+  display: none; /* tira o 🔥 */
+}
+/* BOTÃO anjo COM IMAGEM */
+.btn-anjo-img {
+  background-image: url('icon-anjo.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-anjo-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-anjo-img .icon {
+  display: none; /* tira o 🔥 */
+}
+/* BOTÃO voy COM IMAGEM */
+.btn-voy-img {
+  background-image: url('icon-voy.png');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-voy-img .text {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.btn-voy-img .icon {
+  display: none; /* tira o 🔥 */
+}
 /* BOTÃO OKOK COM IMAGEM */
 .btn-okok-img {
   background-image: url('icon-okok.png');
