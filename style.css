@@ -304,49 +304,17 @@ body.show-internal .refresh-btn {
   display: none !important;
 }
 
-/* ===== SÓ A PÁGINA 2 FICA COM FOTO DE FUNDO ===== */
-#category-Clube777 {
-  position: relative;
-  background: transparent !important;
-  min-height: calc(100vh - 60px);
-  padding-bottom: 90px;
+/* Esconde header, sidebar e botão atualizar quando NÃO está na tela inicial */
+body.show-internal .app-header,
+body.show-internal .sidebar,
+body.show-internal .refresh-btn {
+  display: none !important;
 }
 
-#category-Clube777::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url('icon-Clube777.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35; /* 35% */
-  z-index: -1;
-}
-
-/* BOTÕES DO TOPO SEM FUNDO NA PAG 2 */
-#category-Clube777 .sem-fundo {
-  background: transparent !important;
-  border: none !important;
-  color: #fff !important;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-  position: relative;
-  z-index: 2;
-}
-
-/* BOTÃO WHATSAPP SÓ NA PAG 2 */
-#category-Clube777 .whatsapp-btn {
-  position: relative !important;
-  display: block;
-  margin: 30px auto 0;
-  padding: 14px 20px;
-  background: #25D366 !important;
-  color: #fff !important;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  max-width: 300px;
-  bottom: auto;
-  right: auto;
+/* Deixa os botões da pág 2 um embaixo do outro */
+.action-buttons-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
 }
