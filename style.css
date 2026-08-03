@@ -487,6 +487,32 @@ body.show-internal .refresh-btn {
   background-position: center;
   opacity: 0.22;
   z-index: -1; /* fundo fica lá atrás */
+/* PÁGINA 2 - SÓ FOTO DE FUNDO COM 0.35 */
+#category-Clube777 {
+  position: relative;
+  background: transparent !important;
+}
+
+#category-Clube777::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('icon-Clube777.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35; /* 35% visível */
+  z-index: -1;
+}
+
+/* BOTÕES DO TOPO SEM FUNDO NENHUM */
+#category-Clube777 .sem-fundo {
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important; /* letra branca pra aparecer na foto */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* sombra pra dar contraste */
+  position: relative;
+  z-index: 2;
 }
 
 /* Garante que os botões da pag 1 fiquem na frente */
