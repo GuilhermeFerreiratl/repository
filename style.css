@@ -467,7 +467,11 @@ body.show-internal .refresh-btn {
   gap: 15px;
   padding: 20px;
 }
-/* Fundo transparente para cada página */
+/* Tira o roxo e deixa só a foto de fundo */
+body, .view {
+  background: transparent !important; /* remove o roxo */
+}
+
 .view {
   position: relative;
   z-index: 1;
@@ -480,7 +484,7 @@ body.show-internal .refresh-btn {
   width: 100%; height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.12; /* 12% visível. Se quiser mais forte coloca 0.25 */
+  opacity: 0.22; /* aumentei de 0.12 pra 0.22. Fica com mais cor mas ainda transparente */
   z-index: -1;
 }
 
