@@ -487,32 +487,48 @@ body.show-internal .refresh-btn {
   background-position: center;
   opacity: 0.22;
   z-index: -1; /* fundo fica lá atrás */
-/* PÁGINA 2 - SÓ FOTO DE FUNDO COM 0.35 */
+/* PÁGINA 2 - FUNDO COM FOTO */
 #category-Clube777 {
   position: relative;
   background: transparent !important;
+  min-height: 100vh;
 }
 
 #category-Clube777::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-image: url('icon-Clube777.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.35; /* 35% visível */
+  opacity: 0.35; /* 35% */
   z-index: -1;
 }
 
-/* BOTÕES DO TOPO SEM FUNDO NENHUM */
+/* BOTÕES DO TOPO SEM FUNDO */
 #category-Clube777 .sem-fundo {
   background: transparent !important;
   border: none !important;
-  color: #fff !important; /* letra branca pra aparecer na foto */
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* sombra pra dar contraste */
+  color: #fff !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   position: relative;
-  z-index: 2;
+  z-index: 10;
+}
+
+/* BOTÃO WHATSAPP PAGAMENTO NA FRENTE */
+#category-Clube777 .whatsapp-btn {
+  display: block;
+  position: relative !important;
+  z-index: 999 !important;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: #25D366 !important; /* verde do whats */
+  color: #fff !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Garante que os botões da pag 1 fiquem na frente */
