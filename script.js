@@ -1,17 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.game-card, .nav-btn').forEach(button => {
+  function showView(viewId) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById(viewId).classList.add('active');
+
+    if (viewId === 'main-view') {
+      document.body.classList.remove('show-internal');
+    } else {
+      document.body.classList.add('show-internal');
+    }
+  }
+
+  document.querySelectorAll('[data-view]').forEach(button => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      const viewId = button.getAttribute('data-view');
-      if(!viewId) return;
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      document.getElementById(viewId).classList.add('active');
+      showView(button.getAttribute('data-view'));
     });
   });
+
   document.querySelectorAll('.btn-back').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      document.getElementById('main-view').classList.add('active');
-    });
+    btn.addEventListener('click', () => showView('main-view'));
+  });
+
+  document.getElementById('btn-refresh').addEventListener('click', () => {
+    if ('caches' in window) caches.keys().then(names => names.forEach(name => caches.delete(name)));
+    window.location.reload(true);
   });
 });
