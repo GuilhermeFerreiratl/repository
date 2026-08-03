@@ -85,7 +85,7 @@ body {
 
 .nav-btn.active {
   background-color: #22C55E;
-  color: #000000;
+  color: #000;
   box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
 }
 
@@ -102,6 +102,8 @@ body {
   border-radius: 16px;
   padding: 1.25rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .view.active {
@@ -175,8 +177,8 @@ body {
 .action-buttons-group {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 15px;
+  padding: 20px;
 }
 
 .action-btn {
@@ -204,29 +206,24 @@ body {
     flex-direction: column;
     padding: 0.75rem;
   }
-
   .sidebar {
     width: 100%;
   }
-
   .sidebar-nav {
     flex-direction: row;
     overflow-x: auto;
     padding-bottom: 0.25rem;
     scrollbar-width: none;
   }
-
   .sidebar-nav::-webkit-scrollbar {
     display: none;
   }
-
   .nav-btn {
     flex: 0 0 auto;
     width: auto;
     white-space: nowrap;
     padding: 0.6rem 1rem;
   }
-
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -266,193 +263,40 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   font-size: 1rem;
   transition: transform 0.2s;
-}
-/* BOTÃO Grupow1 COM IMAGEM */
-.btn-w1-img {
-  background-image: url('icon-w1.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-w1-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-w1-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO Clube888 COM IMAGEM */
-.btn-Clube888-img {
-  background-image: url('icon-888.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-Clube888-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-Clube888-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO Equipe777 COM IMAGEM */
-.btn-Equipe777-img {
-  background-image: url('icon-equipe777.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-Equipe777-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-Equipe777-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO Clube777 COM IMAGEM */
-.btn-Clube777-img {
-  background-image: url('icon-Clube777.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-Clube777-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-Clube777-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO we COM IMAGEM */
-.btn-we-img {
-  background-image: url('icon-we.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-we-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-we-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO anjo COM IMAGEM */
-.btn-anjo-img {
-  background-image: url('icon-anjo.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-anjo-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-anjo-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO voy COM IMAGEM */
-.btn-voy-img {
-  background-image: url('icon-voy.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-voy-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-voy-img .icon {
-  display: none; /* tira o 🔥 */
-}
-/* BOTÃO OKOK COM IMAGEM */
-.btn-okok-img {
-  background-image: url('icon-okok.png');
-  background-size: cover;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-}
-
-.btn-okok-img .text {
-  color: #FFFFFF;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.btn-okok-img .icon {
-  display: none; /* tira o 🔥 */
+  z-index: 999;
 }
 
 .whatsapp-btn:hover {
   transform: scale(1.08);
 }
-/* SÓ FOTO NOS BOTÕES DE CIMA - SEM NOME */
-.btn-w1-img .text, 
-.btn-Clube777-img .text, 
-.btn-okok-img .text,
-.btn-anjo-img .text,
-.btn-voy-img .text,
-.btn-we-img .text,
-.btn-Equipe777-img .text,
-.btn-Clube888-img .text {
-  display: none !important; /* some com o nome */
-}
 
-.btn-w1-img .icon, 
-.btn-Clube777-img .icon,
-.btn-okok-img .icon,
-.btn-anjo-img .icon,
-.btn-voy-img .icon,
-.btn-we-img .icon,
-.btn-Equipe777-img .icon, 
-.btn-Clube888-img .icon {
-  display: none !important; /* some com o emoji também */
-}
+/* BOTÕES DA SIDEBAR COM IMAGEM */
+.btn-w1-img { background-image: url('icon-w1.png'); }
+.btn-Clube777-img { background-image: url('icon-Clube777.png'); }
+.btn-okok-img { background-image: url('icon-okok.png'); }
+.btn-Clube888-img { background-image: url('icon-888.png'); }
+.btn-Equipe777-img { background-image: url('icon-equipe777.png'); }
+.btn-we-img { background-image: url('icon-we.png'); }
+.btn-anjo-img { background-image: url('icon-anjo.png'); }
+.btn-voy-img { background-image: url('icon-voy.png'); }
 
-/* Garante que a foto ocupa tudo */
-.btn-w1-img, 
-.btn-Clube777-img, 
-.btn-okok-img,
-.btn-anji-img,
-.btn-voy-img,
-.btn-we-img,
-.btn-Equipe777-img,
-.btn-Clube888-img {
+.btn-w1-img, .btn-Clube777-img, .btn-okok-img, .btn-anjo-img, .btn-voy-img, .btn-we-img, .btn-Equipe777-img, .btn-Clube888-img {
   background-size: cover;
   background-position: center;
-  width: 170px; /* tamanho da foto. Pode ajustar */
-  height: 70px; /* deixa quadrado */
-  border-radius: 15px; /* borda arredondada */
+  background-color: transparent !important;
+  border: none;
+  width: 170px;
+  height: 70px;
+  border-radius: 15px;
 }
+
+.btn-w1-img .text, .btn-Clube777-img .text, .btn-okok-img .text, .btn-anjo-img .text, .btn-voy-img .text, .btn-we-img .text, .btn-Equipe777-img .text, .btn-Clube888-img .text {
+  display: none !important;
+}
+.btn-w1-img .icon, .btn-Clube777-img .icon, .btn-okok-img .icon, .btn-anjo-img .icon, .btn-voy-img .icon, .btn-we-img .icon, .btn-Equipe777-img .icon, .btn-Clube888-img .icon {
+  display: none !important;
+}
+
 /* Esconde header, sidebar e botão atualizar quando NÃO está na tela inicial */
 body.show-internal .app-header,
 body.show-internal .sidebar,
@@ -460,21 +304,12 @@ body.show-internal .refresh-btn {
   display: none !important;
 }
 
-/* Deixa os botões da pág 2 um embaixo do outro */
-.action-buttons-group {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-}.view {
-  position: relative;
-  z-index: 1;
-}
-
-/* SÓ A PÁGINA 2 FICA COM FOTO DE FUNDO */
+/* ===== SÓ A PÁGINA 2 FICA COM FOTO DE FUNDO ===== */
 #category-Clube777 {
   position: relative;
-  background: transparent !important; /* tira o roxo só da pag 2 */
+  background: transparent !important;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 90px;
 }
 
 #category-Clube777::before {
@@ -485,55 +320,33 @@ body.show-internal .refresh-btn {
   background-image: url('icon-Clube777.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.22;
-  z-index: -1; /* fundo fica lá atrás */
-/* PÁGINA 2 - FUNDO COM FOTO */
-#category-Clube777 {
-  position: relative;
-  background: transparent !important;
-  min-height: 100vh;
-}
-
-#category-Clube777::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url('icon-Clube777.png');
-  background-size: cover;
-  background-position: center;
   opacity: 0.35; /* 35% */
   z-index: -1;
 }
 
-/* BOTÕES DO TOPO SEM FUNDO */
+/* BOTÕES DO TOPO SEM FUNDO NA PAG 2 */
 #category-Clube777 .sem-fundo {
   background: transparent !important;
   border: none !important;
   color: #fff !important;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
-/* BOTÃO WHATSAPP PAGAMENTO NA FRENTE */
+/* BOTÃO WHATSAPP SÓ NA PAG 2 */
 #category-Clube777 .whatsapp-btn {
-  display: block;
   position: relative !important;
-  z-index: 999 !important;
-  margin: 20px auto;
-  padding: 12px 20px;
-  background: #25D366 !important; /* verde do whats */
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 20px;
+  background: #25D366 !important;
   color: #fff !important;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-}
-
-/* Garante que os botões da pag 1 fiquem na frente */
-#category-w1 button, 
-#category-w1 .btn-pagamento {
-  position: relative;
-  z-index: 2;
+  max-width: 300px;
+  bottom: auto;
+  right: auto;
 }
