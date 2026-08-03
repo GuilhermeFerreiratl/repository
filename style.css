@@ -467,3 +467,30 @@ body.show-internal .refresh-btn {
   gap: 15px;
   padding: 20px;
 }
+/* Fundo transparente para cada página */
+.view {
+  position: relative;
+  z-index: 1;
+}
+
+.view::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12; /* 12% visível. Se quiser mais forte coloca 0.25 */
+  z-index: -1;
+}
+
+/* Cada página com sua foto */
+#category-w1::before { background-image: url('icon-w1.png'); }
+#category-Clube777::before { background-image: url('icon-Clube777.png'); }
+#category-OK::before { background-image: url('icon-okok.png'); }
+#category-Clube888::before { background-image: url('icon-Clube888.png'); }
+#category-Equipe777::before { background-image: url('icon-Equipe777.png'); }
+#category-we::before { background-image: url('icon-we.png'); }
+#category-voy::before { background-image: url('icon-voy.png'); }
+#category-anjo::before { background-image: url('icon-anjo.png'); }
+#category-montante::before { background-image: url('icon-512.png'); }
