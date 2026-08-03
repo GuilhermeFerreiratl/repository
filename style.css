@@ -453,3 +453,17 @@ body {
   height: 70px; /* deixa quadrado */
   border-radius: 15px; /* borda arredondada */
 }
+/* Esconde header, sidebar e botão atualizar quando NÃO está na tela inicial */
+body.show-internal .app-header,
+body.show-internal .sidebar,
+body.show-internal .refresh-btn {
+  display: none !important;
+}
+
+/* Deixa os botões da pág 2 um embaixo do outro */
+.action-buttons-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
