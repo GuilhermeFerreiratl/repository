@@ -12,6 +12,11 @@
       "type": "image/png"
     },
      {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+     {
       "src": "icon-okok.png",
       "sizes": "120x120",
       "type": "image/png"
