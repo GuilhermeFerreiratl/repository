@@ -277,10 +277,12 @@ body {
 .btn-Clube888-img { background-image: url('icon-888.png'); }
 .btn-Equipe777-img { background-image: url('icon-equipe777.png'); }
 .btn-we-img { background-image: url('icon-we.png'); }
+.btn-ek-img { background-image: url('icon-ek.png'); }
+.btn-dy-img { background-image: url('icon-dy.png'); }
 .btn-anjo-img { background-image: url('icon-anjo.png'); }
 .btn-voy-img { background-image: url('icon-voy.png'); }
 
-.btn-w1-img, .btn-Clube777-img, .btn-okok-img, .btn-anjo-img, .btn-voy-img, .btn-we-img, .btn-Equipe777-img, .btn-Clube888-img {
+.btn-w1-img, .btn-Clube777-img, .btn-okok-img, .btn-ek-img, .btn-dy-img, .btn-anjo-img, .btn-voy-img, .btn-we-img, .btn-Equipe777-img, .btn-Clube888-img {
   background-size: cover;
   background-position: center;
   background-color: transparent !important;
@@ -290,10 +292,10 @@ body {
   border-radius: 15px;
 }
 
-.btn-w1-img .text, .btn-Clube777-img .text, .btn-okok-img .text, .btn-anjo-img .text, .btn-voy-img .text, .btn-we-img .text, .btn-Equipe777-img .text, .btn-Clube888-img .text {
+.btn-w1-img .text, .btn-Clube777-img .text, .btn-ek-img .text, .btn-dy-img .text, .btn-okok-img .text, .btn-anjo-img .text, .btn-voy-img .text, .btn-we-img .text, .btn-Equipe777-img .text, .btn-Clube888-img .text {
   display: none !important;
 }
-.btn-w1-img .icon, .btn-Clube777-img .icon, .btn-okok-img .icon, .btn-anjo-img .icon, .btn-voy-img .icon, .btn-we-img .icon, .btn-Equipe777-img .icon, .btn-Clube888-img .icon {
+.btn-w1-img .icon, .btn-Clube777-img .icon, .btn-okok-img .icon, .btn-ek-img .icon, .btn-dy-img .icon, .btn-anjo-img .icon, .btn-voy-img .icon, .btn-we-img .icon, .btn-Equipe777-img .icon, .btn-Clube888-img .icon {
   display: none !important;
 }
 
